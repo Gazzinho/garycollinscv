@@ -4,3 +4,21 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+a, a:hover, a:visited, a:active {
+  color: #000;
+  text-decoration: none;
+}
+
+.main-title {
+  text-align: center;
+}
+
+.occupation {
+  text-align: center;
+}
+
+.contact {
+  display: table;
+  margin: 0 auto;
+}
