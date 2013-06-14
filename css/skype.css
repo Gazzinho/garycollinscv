@@ -196,12 +196,14 @@ li {
   float: left;
 }
 
-
+.job {
+  margin-bottom: 2em;
+}
 .job-header {
   overflow: auto;
 }
 .job-header h2 {
-	margin-bottom: 1em;
+  margin-bottom: 0.5em;
 }
 .job-years {
   float: left;
@@ -209,6 +211,9 @@ li {
 }
 .job-company {
   float: right;
+}
+.job-title {
+  margin-top: 0;
 }
 
 ul.job-responsibilities {
