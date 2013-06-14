@@ -234,6 +234,7 @@ ul.job-responsibilities {
   @page { margin: 4em; }
   blockquote, pre { page-break-inside: avoid; }
   body { background: white; }
+  a:link:after { content: ""; }
   .profile-main { background: transparent; }
   .cv-name {
     position: static;
