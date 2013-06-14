@@ -1,3 +1,4 @@
+
 .page-content {
   display: table;
   margin: 0 auto;
@@ -10,8 +11,15 @@ a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-.main-title {
+.cv-name {
   text-align: center;
+  margin: 0 auto;
+}
+
+.main-page-title {
+  display: block;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .occupation {
@@ -22,3 +30,10 @@ a, a:hover, a:visited, a:active {
   display: table;
   margin: 0 auto;
 }
+
+.profile-pic {
+  display: block;
+  width: 500px;
+  height: 500px;
+}
+

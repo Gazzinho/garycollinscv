@@ -1,0 +1,214 @@
+@font-face {
+    font-family: "Segoe UI Light";
+    font-style: normal;
+    font-weight: 200;
+    src: local("O"), url("../fonts/segoe-ui/segoe-ui-light-latin.woff") format("woff"), url("../fonts/segoe-ui/segoe-ui-light-latin.eot"), url("../fonts/segoe-ui/segoe-ui-light-latin.eot?") format("embedded-opentype"), url("../fonts/segoe-ui/segoe-ui-light-latin.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Segoe UI Regular";
+    font-style: normal;
+    font-weight: 400;
+    src: local("O"), url("../fonts/segoe-ui/segoe-ui-regular-latin.woff") format("woff"), url("../fonts/segoe-ui/segoe-ui-regular-latin.eot"), url("../fonts/segoe-ui/segoe-ui-regular-latin.eot?") format("embedded-opentype"), url("../fonts/segoe-ui/segoe-ui-regular-latin.ttf") format("truetype");
+}
+@font-face {
+    font-family: "Segoe UI Semibold";
+    font-style: normal;
+    font-weight: 400;
+    src: local("O"), url("../fonts/segoe-ui/segoe-ui-semibold-latin.woff") format("woff"), url("../fonts/segoe-ui/segoe-ui-semibold-latin.eot"), url("../fonts/segoe-ui/segoe-ui-semibold-latin.eot?") format("embedded-opentype"), url("../fonts/segoe-ui/segoe-ui-semibold-latin.ttf") format("truetype");
+}
+
+
+/**
+* Font Families
+* =============
+* font-family: 'Segoe UI', 'Segoe WP', 'Segoe UI Regular', 'Helvetica Neue', Helvetica, Tahoma, 'Arial Unicode MS', sans-serif;
+* font-family: 'Segoe UI Regular';
+* font-family: 'Segoe UI Light';
+**/
+
+/**
+* Color Pallet
+* ============
+* Blue Text: 		rgba(0, 120, 202, 1);
+* Blue background:	#00aeef;
+* Green background:	rgba(127, 186, 0, 1);
+**/
+
+body {
+  font-family: 'Segoe UI Regular', 'Segoe WP', 'Segoe UI Regular', 'Helvetica Neue', Helvetica, Tahoma, 'Arial Unicode MS', sans-serif;
+  color: rgba(51, 53, 52, 1);
+  background-color: rgba(231, 241, 245, 1);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Segoe UI Light","Segoe UI","Segoe WP Light","Segoe WP","Segoe UI Latin Light",HelveticaNeue,Helvetica,Tahoma,ArialUnicodeMS,sans-serif;
+}
+h1 {
+  font-size: 2.25em;
+}
+h2 {
+  font-size: 2em;
+}
+h3 {
+  font-size: 1.5em;
+}
+h1, h2 {
+  font-weight: 200;
+}
+
+
+a, a:hover, a:visited, a:active {
+  color: rgba(51, 53, 52, 1);
+  text-decoration: none;
+}
+
+ul {
+  padding-left: 0px;
+  list-style-type: none;
+}
+li {
+  /*margin-left: 0px;*/
+}
+
+
+.page-content {
+  display: table;
+  position: relative;
+  overflow: auto;
+  width: 60em;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.main-page-title {
+  display: block;
+}
+
+
+.profile-container {
+  position: relative;
+  overflow: auto;
+  background-color: rgba(0, 174, 239, 1);
+}
+
+.profile-aside {
+  float: left;
+  overflow: auto;
+  width: 15em;
+  /*height: 40em;*/
+}
+
+.avatar-container {
+  position: relative;
+  overflow: auto;
+}
+
+.profile-pic {
+  width: 15em;
+  height: 15em;
+}
+
+.cv-name {
+  position: absolute;
+  top: 0px;
+  margin-left: 0.5em;
+  margin-top: 0.5em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 1px #333333;
+  filter: dropshadow(color=#242424, offx=1, offy=1);
+}
+
+.profile-aside .contact {
+  overflow: auto;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+.profile-aside .field {
+  overflow: auto;
+  margin-bottom: 1em;
+  line-height: 1.5em;
+}
+.profile-aside .label {
+  float: none;
+  position: relative;
+  min-width: auto;
+  height: 1.5em;
+  margin-right: auto;
+  color: white;
+}
+.profile-aside .label .label-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.profile-aside .label .label-text {
+  position: absolute;
+  top: 0;
+  left: 2em;
+}
+.profile-aside .value {
+  float: none;
+  overflow: hidden;
+  margin-left: 2em;
+}
+
+
+
+.profile-main {
+  float: left;
+  overflow: auto;
+  width: 45em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.profile-section {
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+
+
+.occupation {
+  margin-top: 0px;
+}
+
+
+.field {
+  overflow: auto;
+  line-height: 1.5em;
+}
+.label {
+  float: left;
+  min-width: 4em;
+  margin-right: 2em;
+}
+.value {
+  float: left;
+}
+
+
+.job-years {
+  margin-right: 2em;
+  color: rgba(0, 120, 202, 1);
+}
+
+ul.job-responsibilities {
+  list-style-type: disc;
+  padding-left: 1.5em;
+}
+
+
+
+
+@media print {
+  @page         { margin: 4em; }
+  blockquote, 
+  pre           { page-break-inside: avoid; }
+  .cv-name { color: white; }
+}
+
