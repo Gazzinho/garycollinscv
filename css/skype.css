@@ -29,9 +29,10 @@
 /**
 * Color Pallet
 * ============
-* Blue Text: 		rgba(0, 120, 202, 1);
-* Blue background:	#00aeef;
-* Green background:	rgba(127, 186, 0, 1);
+* Body Text (dark grey):	color: rgba(51, 53, 52, 1);
+* Blue Text: 				rgba(0, 120, 202, 1);
+* Blue background:			#00aeef;
+* Green background:			rgba(127, 186, 0, 1);
 **/
 
 body {
@@ -51,6 +52,7 @@ h2 {
 }
 h3 {
   font-size: 1.5em;
+  font-weight: 100;
 }
 h1, h2 {
   font-weight: 200;
@@ -95,28 +97,28 @@ li {
   float: left;
   overflow: auto;
   width: 15em;
-  /*height: 40em;*/
 }
 
 .avatar-container {
   position: relative;
   overflow: auto;
 }
-
 .profile-pic {
+  display: block;
   width: 15em;
   height: 15em;
 }
 
 .cv-name {
+  display: block;
   position: absolute;
   top: 0px;
   margin-left: 0.5em;
   margin-top: 0.5em;
   font-weight: normal;
   color: rgba(255, 255, 255, 1);
-  text-shadow: 1px 1px 1px #333333;
-  filter: dropshadow(color=#242424, offx=1, offy=1);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.75);
+  filter: dropshadow(color=#000, offx=1, offy=1);
 }
 
 .profile-aside .contact {
@@ -136,6 +138,8 @@ li {
   height: 1.5em;
   margin-right: auto;
   color: white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.298039);
+  filter: dropshadow(color=#242424, offx=1, offy=1);
 }
 .profile-aside .label .label-icon {
   position: absolute;
@@ -174,7 +178,8 @@ li {
 
 
 .occupation {
-  margin-top: 0px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 
@@ -192,23 +197,41 @@ li {
 }
 
 
+.job-header {
+  overflow: auto;
+}
+.job-header h2 {
+	margin-bottom: 1em;
+}
 .job-years {
-  margin-right: 2em;
+  float: left;
   color: rgba(0, 120, 202, 1);
+}
+.job-company {
+  float: right;
 }
 
 ul.job-responsibilities {
   list-style-type: disc;
   padding-left: 1.5em;
 }
-
+.job-responsibility {
+  color: rgba(0, 120, 202, 1);
+}
+.job-responsibility span {
+  color: rgba(51, 53, 52, 1);
+}
 
 
 
 @media print {
-  @page         { margin: 4em; }
-  blockquote, 
-  pre           { page-break-inside: avoid; }
-  .cv-name { color: white; }
+  
+  @page { margin: 4em; }
+  blockquote, pre { page-break-inside: avoid; }
+  .cv-name {
+    position: static;
+    margin-top: 0.5em;
+    color: rgba(51, 53, 52, 1);
+  }
 }
 
