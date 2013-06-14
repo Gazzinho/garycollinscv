@@ -228,10 +228,19 @@ ul.job-responsibilities {
   
   @page { margin: 4em; }
   blockquote, pre { page-break-inside: avoid; }
+  body { background: white; }
+  .profile-main { background: transparent; }
   .cv-name {
     position: static;
     margin-top: 0.5em;
     color: rgba(51, 53, 52, 1);
+    text-shadow: none;
+    filter: none;
+  }
+  .profile-aside .label {
+    color: rgba(51, 53, 52, 1);
+    text-shadow: none;
+    filter: none;
   }
 }
 
