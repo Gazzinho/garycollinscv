@@ -149,12 +149,20 @@ li {
 .profile-aside .label .label-text {
   position: absolute;
   top: 0;
-  left: 2em;
+  left: 1.75em;
 }
 .profile-aside .value {
   float: none;
   overflow: hidden;
-  margin-left: 2em;
+  margin-left: 1.75em;
+}
+
+.web-cv-link {
+  display: none;
+}
+.qr-code {
+  width: 9em;
+  margin-top: 0.5em;
 }
 
 
@@ -247,6 +255,9 @@ ul.job-responsibilities {
     color: rgba(51, 53, 52, 1);
     text-shadow: none;
     filter: none;
+  }
+  .web-cv-link {
+    display: block;
   }
 }
 
