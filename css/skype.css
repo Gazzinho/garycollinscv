@@ -33,10 +33,12 @@
 * Blue Text: 				rgba(0, 120, 202, 1);
 * Blue background:			#00aeef;
 * Green background:			rgba(127, 186, 0, 1);
+* Purple background:		rgba(149, 60, 172, 1);
+* Orange background:		rgba(255, 140, 0, 1);
 **/
 
 body {
-  font-family: 'Segoe UI Regular', 'Segoe WP', 'Segoe UI Regular', 'Helvetica Neue', Helvetica, Tahoma, 'Arial Unicode MS', sans-serif;
+  font-family: 'Segoe UI Light', 'Segoe UI Regular', 'Segoe WP', 'Segoe UI Regular', 'Helvetica Neue', Helvetica, Tahoma, 'Arial Unicode MS', sans-serif;
   color: rgba(51, 53, 52, 1);
   background-color: rgba(231, 241, 245, 1);
 }
@@ -110,7 +112,7 @@ li {
 }
 
 .cv-name {
-  display: block;
+  display: none;
   position: absolute;
   top: 0px;
   margin-left: 0.5em;
@@ -121,10 +123,25 @@ li {
   filter: dropshadow(color=#000, offx=1, offy=1);
 }
 
-.profile-aside .contact {
+
+.profile-aside-details-section {
   overflow: auto;
   padding-left: 1em;
   padding-right: 1em;
+}
+.profile-aside .contact {
+  overflow: auto;
+  background-color: rgba(149, 60, 172, 1);
+}
+.contact-name {
+  display: block;
+}
+.profile-aside-section-title {
+  margin-top: 0.5em;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 1);
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.298039);
+  filter: dropshadow(color=#000, offx=1, offy=1);
 }
 .profile-aside .field {
   overflow: auto;
@@ -132,29 +149,55 @@ li {
   line-height: 1.5em;
 }
 .profile-aside .label {
+  color: white;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.298039);
+  filter: dropshadow(color=#242424, offx=1, offy=1);
+}
+.profile-aside .label.contact-label {
   float: none;
   position: relative;
   min-width: auto;
   height: 1.5em;
   margin-right: auto;
-  color: white;
-  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.298039);
-  filter: dropshadow(color=#242424, offx=1, offy=1);
 }
 .profile-aside .label .label-icon {
   position: absolute;
   top: 0;
   left: 0;
+  width: 1.563em;
+  height: 1.563em;
+  background: url("../img/overview_icons.svg") no-repeat;
+}
+.profile-aside .skype .label .label-icon {
+  background-position: -350px -50px;
+}
+.profile-aside .email .label .label-icon {
+  background-position: -346px -422px;
+  margin-left: -1px;
+}
+.profile-aside .phone .label .label-icon {
+  background-position: -252px -452px;
+}
+.profile-aside .linkedin .label .label-icon {
+  background-position: -252px -484px;
 }
 .profile-aside .label .label-text {
   position: absolute;
   top: 0;
-  left: 1.75em;
+  left: 2.688em;
+}
+.profile-aside a {
+  color: rgba(255, 255, 255, 1);
 }
 .profile-aside .value {
   float: none;
   overflow: hidden;
-  margin-left: 1.75em;
+  margin-left: 3.071em;
+  font-size: 0.875em;
+  color: rgba(255, 255, 255, 1);
+}
+.profile-aside .value a {
+  color: rgba(255, 255, 255, 1);
 }
 
 .web-cv-link {
@@ -163,6 +206,56 @@ li {
 .qr-code {
   width: 9em;
   margin-top: 0.5em;
+}
+.linkedin-profile-id {
+  display: none;
+}
+.profile-aside-details-section .field {
+  min-height: 3em;
+}
+
+.profile-aside .field.reference {
+  overflow: hidden;
+}
+.reference-position-item {
+  overflow: hidden;
+  font-size: 0.875em;
+  color: rgba(255, 255, 255, 1);
+}
+.reference-position-label {
+  float: left;
+  width: 4em;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.298039);
+  filter: dropshadow(color=#242424, offx=1, offy=1);
+}
+.reference-position-value {
+  float: right;
+  width: 10em;
+}
+.reference .contact-label {
+  overflow: hidden;
+  height: auto;
+  margin-bottom: 0.5em;
+}
+.profile-aside .reference .contact-label {
+  height: auto;
+}
+.reference .contact-label .label-icon-container {
+  float: left;
+  width: 2em;
+}
+.reference .contact-label .label-icon {
+  position: static;
+}
+.reference .contact-label .label-text {
+  position: static;
+  float: left;
+  padding-top: 3px;
+  font-size: 0.875em;
+  line-height: 1.25em;
+}
+.reference-contact-item.email .label-text br {
+  display: none;
 }
 
 
@@ -196,43 +289,112 @@ li {
   line-height: 1.5em;
 }
 .label {
-  float: left;
   min-width: 4em;
   margin-right: 2em;
 }
-.value {
-  float: left;
+
+.profile-section-title {
+  text-align: right;
+  color: rgba(0, 120, 202, 1);
+}
+.employment-history-title {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 1em;
+  margin-right: 1em;
+}
+.profile-section-title.interests-title {
+  text-align: left;
 }
 
-.job {
+.profile-entry {
+  overflow: auto;
   margin-bottom: 2em;
 }
-.job-header {
+.profile-entry-header {
   overflow: auto;
 }
-.job-header h2 {
+.profile-entry-header h2 {
   margin-bottom: 0.5em;
 }
-.job-years {
+.profile-entry-years {
   float: left;
   color: rgba(0, 120, 202, 1);
 }
-.job-company {
+.profile-entry-name {
   float: right;
 }
-.job-title {
+.profile-entry-title {
   margin-top: 0;
 }
 
-ul.job-responsibilities {
+ul.profile-entry-values {
+  overflow: auto;
   list-style-type: disc;
   padding-left: 1.5em;
 }
-.job-responsibility {
+.profile-entry-value {
   color: rgba(0, 120, 202, 1);
 }
-.job-responsibility span {
+.profile-entry-value span {
   color: rgba(51, 53, 52, 1);
+}
+
+.profile-main .references-section {
+  display: none;
+}
+.profile-main .references-section .profile-entry-name {
+  float: left;
+  color: rgba(0, 120, 202, 1);
+}
+.profile-main .reference-position-item {
+  font-size: 1em;
+  color: rgba(51, 53, 52, 1);
+}
+.profile-main .reference-position-label {
+  width: 6em;
+  color: rgba(0, 120, 202, 1);
+  text-shadow: none;
+  filter: none;
+}
+.profile-main .reference-position-value {
+  float: left;
+  width: auto;
+}
+.profile-main .reference-contact-item {
+  float: left;
+  min-width: 12em;
+}
+.profile-main .reference-contact-item .label.contact-label {
+  min-width: auto;
+  margin-right: 3em;
+}
+
+footer {
+  position: relative;
+  overflow: hidden;
+  height: 219px;
+  width: 100% !important;
+  margin-top: 2em;
+  background-color: #d4e0e4;
+  background-image: -ms-linear-gradient(top, #d4e0e4 0%, #e1f1f4 100%);
+  background-image: -moz-linear-gradient(top, #d4e0e4 0%, #e1f1f4 100%);
+  background-image: -o-linear-gradient(top, #d4e0e4 0%, #e1f1f4 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #d4e0e4), color-stop(1, #e1f1f4));
+  background-image: -webkit-linear-gradient(top, #d4e0e4 0%, #e1f1f4 100%);
+  background-image: linear-gradient(top, #d4e0e4 0%, #e1f1f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4e0e4', endColorstr='#e1f1f4',GradientType=0 );
+}
+.footer-image-container {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 1000px;
+  height: 148px;
+  right: -706px;
+  background: url("../img/footer-clouds-with-rainbow.png") no-repeat;
+  z-index: 1;
 }
 
 
@@ -242,22 +404,77 @@ ul.job-responsibilities {
   @page { margin: 4em; }
   blockquote, pre { page-break-inside: avoid; }
   body { background: white; }
+  footer { display: none; }
   a:link:after { content: ""; }
   .profile-main { background: transparent; }
   .cv-name {
-    position: static;
-    margin-top: 0.5em;
+    display: none;
+  }
+  .contact-name {
+  	display: block;
+  }
+  .profile-aside-section-title {
     color: rgba(51, 53, 52, 1);
     text-shadow: none;
     filter: none;
+  }
+  .profile-aside a {
+  	color: rgba(51, 53, 52, 1);
   }
   .profile-aside .label {
     color: rgba(51, 53, 52, 1);
     text-shadow: none;
     filter: none;
   }
+  .profile-aside .skype .label .label-icon {
+    background: url("../img/overview_icons.svg") no-repeat !important;
+    background-position: -347px -452px;
+  }
+  .profile-aside .email .label .label-icon {
+    background: url("../img/overview_icons.svg") no-repeat !important;
+    background-position: -395px -422px;
+  }
+  .profile-aside .phone .label .label-icon {
+    background: url("../img/overview_icons.svg") no-repeat !important;
+    background-position: -301px -452px;
+  }
+  .profile-aside .linkedin .label .label-icon {
+    background: url("../img/overview_icons.svg") no-repeat !important;
+    background-position: -302px -484px;
+  }
+  .profile-aside .value {
+    color: rgba(51, 53, 52, 1);
+  }
+  .linkedin-profile-id {
+    display: block;
+  }
   .web-cv-link {
     display: block;
+  }
+  .profile-aside .references-section {
+    display: none;
+  }
+  .profile-main .references-section {
+    display: block;
+  }
+  .reference-position-item {
+    color: rgba(51, 53, 52, 1);
+  }
+  .reference-position-label {
+    text-shadow: none;
+    filter: none;
+  }
+  .reference-contact-item .label-icon-container {
+    display: none;
+  }
+  .reference-contact-item.email .label-text br {
+    display: none;
+  }
+  .reference-contact-item .linkedin-profile-id {
+    display: inline;
+  }
+  .employment-history {
+    page-break-after: always;
   }
 }
 
