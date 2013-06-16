@@ -78,7 +78,7 @@ li {
 .page-content {
   display: table;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   width: 60em;
   margin: 0 auto;
   padding: 1em;
@@ -91,19 +91,19 @@ li {
 
 .profile-container {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(0, 174, 239, 1);
 }
 
 .profile-aside {
   float: left;
-  overflow: auto;
+  overflow: hidden;
   width: 15em;
 }
 
 .avatar-container {
   position: relative;
-  overflow: auto;
+  overflow: hidden;
 }
 .profile-pic {
   display: block;
@@ -125,12 +125,12 @@ li {
 
 
 .profile-aside-details-section {
-  overflow: auto;
+  overflow: hidden;
   padding-left: 1em;
   padding-right: 1em;
 }
 .profile-aside .contact {
-  overflow: auto;
+  overflow: hidden;
   background-color: rgba(149, 60, 172, 1);
 }
 .contact-name {
@@ -144,7 +144,7 @@ li {
   filter: dropshadow(color=#000, offx=1, offy=1);
 }
 .profile-aside .field {
-  overflow: auto;
+  overflow: hidden;
   margin-bottom: 1em;
   line-height: 1.5em;
 }
@@ -181,6 +181,9 @@ li {
 .profile-aside .linkedin .label .label-icon {
   background-position: -252px -484px;
 }
+.profile-aside .pdf .label .label-icon {
+  background: transparent;
+}
 .profile-aside .label .label-text {
   position: absolute;
   top: 0;
@@ -209,9 +212,6 @@ li {
 }
 .linkedin-profile-id {
   display: none;
-}
-.profile-aside-details-section .field {
-  min-height: 3em;
 }
 
 .profile-aside .field.reference {
@@ -285,7 +285,7 @@ li {
 
 
 .field {
-  overflow: auto;
+  overflow: hidden;
   line-height: 1.5em;
 }
 .label {
@@ -299,6 +299,7 @@ li {
 }
 .employment-history-title {
   position: absolute;
+  overflow: hidden;
   right: 0;
   top: 0;
   margin-top: 1em;
@@ -450,6 +451,9 @@ footer {
   }
   .web-cv-link {
     display: block;
+  }
+  .pdf {
+    display: none;
   }
   .profile-aside .references-section {
     display: none;
