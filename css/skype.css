@@ -169,6 +169,7 @@ li {
   background: url("../img/overview_icons.svg") no-repeat;
 }
 .profile-aside .skype .label .label-icon {
+  margin-top: 0.125em;
   background-position: -350px -50px;
 }
 .profile-aside .email .label .label-icon {
