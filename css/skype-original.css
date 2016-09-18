@@ -76,34 +76,39 @@ li {
 
 
 .page-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: table;
+  position: relative;
   overflow: hidden;
   width: 60em;
   margin: 0 auto;
   padding: 1em;
 }
 
+.main-page-title {
+  display: block;
+}
+
+
 .profile-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  position: relative;
   overflow: hidden;
   background-color: rgba(0, 174, 239, 1);
 }
 
 .profile-aside {
+  float: left;
   overflow: hidden;
-  width: 16em;
+  width: 15em;
 }
 
 .avatar-container {
+  position: relative;
   overflow: hidden;
 }
 .profile-pic {
-  width: 16em;
-  height: 16em;
+  display: block;
+  width: 15em;
+  height: 15em;
 }
 
 .cv-name {
@@ -199,15 +204,15 @@ li {
   color: rgba(255, 255, 255, 1);
 }
 
-.linkedin-profile-id {
-  display: none;
-}
 .web-cv-link {
   display: none;
 }
 .qr-code {
   width: 9em;
   margin-top: 0.5em;
+}
+.linkedin-profile-id {
+  display: none;
 }
 
 .profile-aside .field.reference {
@@ -257,9 +262,10 @@ li {
 
 
 .profile-main {
+  float: left;
   overflow: auto;
   width: 45em;
-  padding-top: 0em;
+  padding-top: 1em;
   padding-bottom: 1em;
   background-color: rgba(255, 255, 255, 1);
 }
@@ -267,16 +273,14 @@ li {
 .profile-section {
   margin-left: 2em;
   margin-right: 2em;
-  margin-top: 0em;
+  margin-top: 1em;
   margin-bottom: 1em;
   overflow: auto;
 }
 
-.profile-info {
-  position: absolute;
-}
+
 .occupation {
-  margin-top: 0.8em;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -293,6 +297,14 @@ li {
 .profile-section-title {
   text-align: right;
   color: rgba(0, 120, 202, 1);
+}
+.employment-history-title {
+  position: absolute;
+  overflow: hidden;
+  right: 0;
+  top: 0;
+  margin-top: 1em;
+  margin-right: 1em;
 }
 .profile-section-title.interests-title {
   text-align: left;
