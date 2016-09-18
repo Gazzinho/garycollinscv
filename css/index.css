@@ -1,0 +1,47 @@
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.cv-name,
+.occupation {
+    text-align: center;
+}
+
+.profile-pic {
+    width: 500px;
+    height: 500px;
+}
+
+.cv-themes-section {
+
+}
+.cv-themes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+.cv-theme {
+    list-style: none;
+}
+.cv-skype-theme .cv-theme-icon {
+    width: 150px;
+    height: 150px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a, a:hover, a:visited, a:active {
+    color: #000;
+    text-decoration: none;
+}
