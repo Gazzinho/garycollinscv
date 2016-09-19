@@ -199,7 +199,8 @@ li {
   color: rgba(255, 255, 255, 1);
 }
 
-.linkedin-profile-id {
+.linkedin-profile-id,
+.linkedin-profile-id-colon {
   display: none;
 }
 .web-cv-link {
@@ -336,9 +337,10 @@ ul.profile-entry-values {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
+  margin-top: 2em;
 }
 .screenshot {
-  margin-bottom: 30px;
+  margin-bottom: 1.5em;
 }
 .screenshot-image {
   width: 300px;
@@ -450,6 +452,9 @@ footer {
   }
   .linkedin-profile-id {
     display: block;
+  }
+  .linkedin-profile-id-colon {
+    display: inline;
   }
   .web-cv-link {
     display: block;
