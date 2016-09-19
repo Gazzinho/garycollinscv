@@ -29,12 +29,12 @@
 /**
 * Color Pallet
 * ============
-* Body Text (dark grey):	color: rgba(51, 53, 52, 1);
-* Blue Text: 				rgba(0, 120, 202, 1);
-* Blue background:			#00aeef;
-* Green background:			rgba(127, 186, 0, 1);
-* Purple background:		rgba(149, 60, 172, 1);
-* Orange background:		rgba(255, 140, 0, 1);
+* Body Text (dark grey):  color: rgba(51, 53, 52, 1);
+* Blue Text:        rgba(0, 120, 202, 1);
+* Blue background:      #00aeef;
+* Green background:     rgba(127, 186, 0, 1);
+* Purple background:    rgba(149, 60, 172, 1);
+* Orange background:    rgba(255, 140, 0, 1);
 **/
 
 body {
@@ -140,7 +140,9 @@ li {
 }
 .profile-aside .field {
   overflow: hidden;
+  margin-top: -0.125em;
   margin-bottom: 1em;
+  padding-bottom: 0.125em;
   line-height: 1.5em;
 }
 .profile-aside .label {
@@ -163,13 +165,25 @@ li {
   height: 1.563em;
   background: url("../img/overview_icons.svg") no-repeat;
 }
+.profile-aside .skype {
+  padding-bottom: 0.125em;
+}
 .profile-aside .skype .label .label-icon {
-  margin-top: 0.125em;
+  top: 0.125em;
   background-position: -350px -50px;
+}
+.profile-aside .skype .skype-label {
+  display: none;
+}
+.profile-aside-details-section.contact .skype .label .label-text {
+  display: none;
 }
 .profile-aside .email .label .label-icon {
   background-position: -346px -422px;
   margin-left: -1px;
+}
+.profile-aside-details-section.contact .email .label .label-text {
+  display: none;
 }
 .profile-aside .phone .label .label-icon {
   background-position: -252px -452px;
@@ -177,8 +191,12 @@ li {
 .profile-aside .linkedin .label .label-icon {
   background-position: -252px -484px;
 }
+.profile-aside .pdf {
+  margin-top: -0.125em;
+}
 .profile-aside .pdf .label .label-icon {
-  background: transparent;
+  background: url("../img/pdf-icon-white-256x256.png") no-repeat;
+  background-size: cover;
 }
 .profile-aside .label .label-text {
   position: absolute;
@@ -263,6 +281,7 @@ li {
   padding-top: 0em;
   padding-bottom: 1em;
   background-color: rgba(255, 255, 255, 1);
+  text-align: justify;
 }
 
 .profile-section {
@@ -271,6 +290,10 @@ li {
   margin-top: 0em;
   margin-bottom: 1em;
   overflow: auto;
+}
+
+.summary .job-header {
+  font-size: 1.1em;
 }
 
 .profile-info {
@@ -343,6 +366,7 @@ ul.profile-entry-values {
   margin-bottom: 1.5em;
 }
 .screenshot-image {
+  border: 1px solid lightgrey;
   width: 300px;
 }
 
@@ -416,7 +440,7 @@ footer {
     display: none;
   }
   .contact-name {
-  	display: block;
+    display: block;
   }
   .profile-aside-section-title {
     color: rgba(51, 53, 52, 1);
@@ -424,7 +448,7 @@ footer {
     filter: none;
   }
   .profile-aside a {
-  	color: rgba(51, 53, 52, 1);
+    color: rgba(51, 53, 52, 1);
   }
   .profile-aside .label {
     color: rgba(51, 53, 52, 1);
@@ -435,9 +459,19 @@ footer {
     background: url("../img/overview_icons.svg") no-repeat !important;
     background-position: -347px -452px;
   }
+  .profile-aside .skype .skype-label {
+    display: block;
+    position: relative;
+    left: 2.65em;
+  }
   .profile-aside .email .label .label-icon {
     background: url("../img/overview_icons.svg") no-repeat !important;
     background-position: -395px -422px;
+  }
+  .profile-aside .email .label .label-text {
+    display: block;
+    position: relative;
+    top: -1em;
   }
   .profile-aside .phone .label .label-icon {
     background: url("../img/overview_icons.svg") no-repeat !important;
@@ -459,6 +493,9 @@ footer {
   .web-cv-link {
     display: block;
   }
+  .web-cv-link .web-link {
+    margin-top: 1em;
+  }
   .pdf {
     display: none;
   }
@@ -473,10 +510,26 @@ footer {
   }
   .reference-position-item {
     color: rgba(51, 53, 52, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .reference-position-label {
     text-shadow: none;
     filter: none;
+  }
+  .reference-contact-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .profile-main .reference-contact-item {
+    float: none;
+    min-width: auto;
+  }
+  .profile-main .reference-contact-item .label.contact-label {
+    margin-right: 0;
   }
   .reference-contact-item .label-icon-container {
     display: none;
