@@ -331,6 +331,19 @@ ul.profile-entry-values {
   color: rgba(51, 53, 52, 1);
 }
 
+.screenshots {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.screenshot {
+  margin-bottom: 30px;
+}
+.screenshot-image {
+  width: 300px;
+}
+
 .profile-main .references-section {
   display: none;
 }
@@ -442,6 +455,9 @@ footer {
     display: block;
   }
   .pdf {
+    display: none;
+  }
+  .screenshots {
     display: none;
   }
   .profile-aside .references-section {
