@@ -231,6 +231,9 @@ li {
   margin-top: 0.5em;
 }
 
+.profile-aside .references-section {
+  display: none;
+}
 .profile-aside .field.reference {
   overflow: hidden;
 }
@@ -372,6 +375,9 @@ ul.profile-entry-values {
   width: 300px;
 }
 
+.profile-main .references-on-demand-section {
+  display: none;
+}
 .profile-main .references-section {
   display: none;
 }
@@ -504,8 +510,17 @@ footer {
   .profile-aside .references-section {
     display: none;
   }
-  .profile-main .references-section {
+  .profile-aside .references-on-demand-section {
+    display: none;
+  }
+  .profile-main .references-on-demand-section {
     display: block;
+  }
+  .profile-main .references-on-demand-section .references-title {
+    text-align: left;
+  }
+  .profile-main .references-section {
+    display: none;
   }
   .reference-position-item {
     color: rgba(51, 53, 52, 1);
